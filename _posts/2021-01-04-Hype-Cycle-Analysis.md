@@ -14,7 +14,7 @@
     * [Forecast](#section4b)
 * [Conclusion](#section5)
 
-![](attachment:../images/hca_1.png)
+![](../images/hca_1.png)
 
 <a id="section1"></a>
 # Introduction
