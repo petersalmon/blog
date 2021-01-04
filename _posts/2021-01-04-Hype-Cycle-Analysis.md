@@ -1,4 +1,4 @@
-# The Technological Hype Cycle: Is it all Hype?
+# The Technological Hype Cycle: Is it All Hype?
 
 **Table of Contents:**
 
@@ -25,7 +25,7 @@ For this analysis, we will look at quantum computing, blockchain, and 3D printin
 
 For each term, we will explore their web search, news search, and YouTube search trends, across several years, with the specific goal of identifying a hype cycle if one exists. We will then forecast these trends into the future. In this way, we'll see where the technologies are at, and where they are headed.
 
-![image.png](attachment:image.png)
+![](../images/hca_2.png)
 
 
 ```python
@@ -406,7 +406,7 @@ plot_tech_trends(qc_df, "Quantum Computing")
 
 
     
-![png](output_18_0.png)
+![](../images/hca_3.png)
     
 
 
@@ -423,7 +423,7 @@ plt.title('Quantum Computing Web Search Popularity');
 
 
     
-![png](output_20_0.png)
+![](../images/hca_4.png)
     
 
 
@@ -449,7 +449,7 @@ print(f"Average Popularity 2017 - 2019: {mean_3}")
     Average Popularity 2017 - 2019: 44.7
 
 
-![image-2.png](attachment:image-2.png)
+![](../images/hca_5.png)
 Above: The circles mark the peaks of interest and the arrows emphasize the apparent upward trend immediately after.
 
 It seems like each successive peak in popularity is it's own hype cycle. Popularity for quantum computing spiked and deteriorated but left behind individuals with a new found interest for the topic. Then, Another spike occured and additional converts were obtained. This shows a pattern of a true hype cycle, and increase, decrease, and subtle long term increase in popularity of quantum computing occurring over and over again. 
@@ -485,7 +485,7 @@ with plt.rc_context():
 
 
     
-![png](output_29_0.png)
+![](../images/hca_6.png)
     
 
 
@@ -506,7 +506,7 @@ plot_tech_trends(tdp_df, "3D Printing")
 
 
     
-![png](output_34_0.png)
+![](../images/hca_7.png)
     
 
 
@@ -547,7 +547,7 @@ with plt.rc_context():
 
 
     
-![png](output_39_0.png)
+![](../images/hca_8.png)
     
 
 
@@ -568,7 +568,7 @@ plot_tech_trends(bc_df.iloc[140:,:], "Blockchain")
 
 
     
-![png](output_44_0.png)
+![](../images/hca_9.png)
     
 
 
@@ -605,7 +605,7 @@ with plt.rc_context():
 
 
     
-![png](output_49_0.png)
+![](../images/hca_10.png)
     
 
 
