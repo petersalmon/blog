@@ -1,3 +1,4 @@
+# The Technological Hype Cycle: Is it all Hype?
 
 **Table of Contents:**
 
@@ -13,7 +14,7 @@
     * [Forecast](#section4b)
 * [Conclusion](#section5)
 
-![image.png](attachment:image.png)
+![](attachment:/../images/hca_1.png)
 
 <a id="section1"></a>
 # Introduction
