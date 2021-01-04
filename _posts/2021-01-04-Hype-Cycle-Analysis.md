@@ -50,7 +50,6 @@ warnings.filterwarnings('ignore')
 %matplotlib inline
 ```
 
-    Importing plotly failed. Interactive plots will not work.
 
 
 
