@@ -1,7 +1,3 @@
----
-layout: post
-title: The Technological Hype Cycle: Is it All Hype?
----
 
 **Table of Contents:**
 
