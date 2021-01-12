@@ -36,28 +36,12 @@ For each term, we will explore their web search, news search, and YouTube search
 
 Let's take a look at the different time series we have available for quantum computing. We'll add a moving average of 6 months as well to obtain a smoothed version of the trends.
 
-
-```python
-plot_tech_trends(qc_df, "Quantum Computing")
-```
-
-
     
 ![](../images/hca_3.png)
     
 
 
 Looking at the graphs above, we do not see a distinct peak with a sharp drop off followed by a steady increase, which is characteristic of the hype cycle. The popularity of quantum computing in terms of web search seems to be constant since 2005 with a slight upward trend beginning in 2013. The popularity peak occurs in 2020 which is followed by a drop but nothing too drastic. If we were to zoom into the 2020 peak, we may obtain a curve more similar to what we are looking for ... let's test it out below.
-
-
-```python
-plt.figure(figsize=(16,6))
-
-qc_df['2019-01-01':]['Popularity_ws'].plot();
-plt.ylabel('Relative Popularity');
-plt.title('Quantum Computing Web Search Popularity');
-```
-
 
     
 ![](../images/hca_4.png)
@@ -69,17 +53,6 @@ This looks a little more like it but it occurs over a short span of about 1.5 - 
 Taking a quick look at the other trends, there seems to have been a peak in interest around quantum computing on YouTube at around 2017 which is reflected, to a much lower degree, as two spikes just before and after 2017 in web search. Although, the interest quite literally fell off in mid 2017 and has seen a steady decline ever since. Popularity in news search seems to have been constant, on average, with much larger swings throughout time. 
 
 Taking a look at the highest peaks before the one in 2020, we can see that there are two that stand out in 2016 and 2013. After these, the average popularity seems to increase directly after. This is made evident by calculating the average popularity value for the time intervals in between the peaks. Naturally, the popularity falls right after these peaks and then a new 'normal' popularity is established.
-
-
-```python
-mean_1 = qc_df['2007-01-01':'2013-01-01']['Popularity_ws'].mean()
-mean_2 = qc_df['2013-01-01':'2017-01-01']['Popularity_ws'].mean()
-mean_3 = qc_df['2017-01-01':'2019-06-01']['Popularity_ws'].mean()
-
-print(f"Average Popularity 2007 - 2013: {mean_1}")
-print(f"Average Popularity 2013 - 2017: {mean_2}")
-print(f"Average Popularity 2017 - 2019: {mean_3}")
-```
 
     Average Popularity 2007 - 2013: 18.643835616438356
     Average Popularity 2013 - 2017: 29.775510204081634
@@ -97,17 +70,6 @@ It seems like each successive peak in popularity is it's own hype cycle. Popular
 Let's see what the forecast of quantum computing's web search popularity can tell us.
 
 
-```python
-with plt.rc_context():
-    plt.rc("figure", figsize=(16,8))
-    qc_fit.plot_predict(start=2, end=len(qc_df)+24);
-    qc_df.reset_index()[1:].reset_index().reindex(index=range(191,205))['Popularity_ws'].plot()
-    plt.title('Forecast of Quantum Computing Web Search Popularity');
-    plt.xlabel('Point in Time');
-    plt.ylabel('Relative Popularity');
-```
-
-
     
 ![](../images/hca_6.png)
     
@@ -122,12 +84,6 @@ Our model predicts there to be continued growth in popularity of quantum computi
 ## Exploration
 
 We will now consider the popularity of 3D printing, also known as additive manufacturing.
-
-
-```python
-plot_tech_trends(tdp_df, "3D Printing")
-```
-
 
     
 ![](../images/hca_7.png)
@@ -146,17 +102,6 @@ The rise, fall, and plateaus we see in web searches from 2013 - 2017 may be an a
 ## Forecast
 
 
-```python
-with plt.rc_context():
-    plt.rc("figure", figsize=(16,8))
-    tdp_fit.plot_predict(start=2, end=len(qc_df)+24);
-    tdp_df.reset_index()[1:].reset_index().reindex(index=range(191,205))['Popularity_ws'].plot()
-    plt.title('Forecast of 3D Printing Web Search Popularity');
-    plt.xlabel('Point in Time');
-    plt.ylabel('Relative Popularity');
-```
-
-
     
 ![](../images/hca_8.png)
     
@@ -172,12 +117,6 @@ Our forecast for the web search popularity of 3D printing predicts an increasing
 
 Finally, we will take a look at the blockchain. Since it looks like the technology was practically invisible to the public eye before 2017, we'll zoom in starting from 2016.
 
-
-```python
-plot_tech_trends(bc_df.iloc[140:,:], "Blockchain")
-```
-
-
     
 ![](../images/hca_9.png)
     
@@ -189,17 +128,6 @@ The blockchain is a very abstract concept with a very narrow field of applicatio
 
 <a id="section4b"></a>
 ## Forecast
-
-
-```python
-with plt.rc_context():
-    plt.rc("figure", figsize=(16,8))
-    bc_fit.plot_predict(start=2, end=len(qc_df)+24);
-    bc_df.reset_index()[1:].reset_index().reindex(index=range(191,205))['Popularity_ws'].plot()
-    plt.title("Forecast of Blockchain's Web Search Popularity");
-    plt.xlabel('Point in Time');
-    plt.ylabel('Relative Popularity');
-```
 
 
     
